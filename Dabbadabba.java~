@@ -1,0 +1,135 @@
+public class Dabbadabba {
+
+    public static final int STEPS = 3;
+    /**
+     * The foo function is intended to print out dashes 
+       
+     */
+    public static void foo() {
+        for (int i = 0; i < (STEPS + 1) * 2 + 1; i++) {
+            System.out.print("-");
+        }
+    }
+
+    public static void bippityBop() {
+        foo();
+        System.out.print("| %");
+        for (int i = 0; i < 4; i++) {
+            System.out.print(" ");
+        } 
+	System.out.print("% |" );
+	foo();
+	System.out.println();
+    }
+
+    public static void foo_bop() {
+        bippityBop();
+        for (int i = 0; i < STEPS + 1; i++) {
+	    System.out.print(" o");
+	}
+        System.out.print(" | %");
+        for (int i = 0; i < 4; i++) {
+	    System.out.print(" ");
+	}
+        System.out.print("% | ");
+        for (int i = 0; i < STEPS + 1; i++){
+	    System.out.print("o ");
+	}
+        System.out.println();
+        bippityBop();
+    }
+
+    public static void drawStepS() {
+	for (int i = 0; i < STEPS; i++) {
+            for (int j = 0; j < (STEPS + 1)-i; j++) {
+                System.out.print("~^"); 
+	    }
+            System.out.print("~/");
+            for (int j = 0; j < 8 + 4 * i; j++) {
+		System.out.print("-");
+            }
+            System.out.print("\\~");
+            for (int j = 0; j < (STEPS + 1) - i; j++) {
+                System.out.print("^~");
+            }
+            System.out.println();
+            for (int j = 0; j < (STEPS + 1) - i; j++) {
+                System.out.print("^~");
+            }
+            System.out.print("/");
+            for (int j = 0; j < 10 + 4 * i; j++) {
+                System.out.print("-"); 
+	    }
+            System.out.print("\\");
+            for (int j = 0; j < (STEPS + 1) - i; j++) {
+                 System.out.print("~^");
+            }
+            System.out.println();
+            for (int j = 0; j < (STEPS + 1) * 2 - (2 * i); j++) {
+                 System.out.print(" ");
+            }
+            System.out.print("|");
+            for (int j = 0; j < 10 + 4 * i; j++) {
+                 System.out.print("=");
+            }
+            System.out.print("|");
+            System.out.println();
+	}
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < (STEPS + 1) * 2 + (5 - i); j++) {
+        	System.out.print(" ");
+            }
+            System.out.print("/");
+            for (int j = 0; j < i; j++) {
+        	System.out.print("/\\"); 
+	    }
+            System.out.println("\\");
+        }
+        foo_bop();
+        drawSteps();
+        System.out.print("   /");
+        for (int i = 0; i < 12 + 4 * (STEPS - 1); i++) {
+            System.out.print(" ");
+        }
+        System.out.print("\\"); 
+	System.out.println(); 
+	System.out.print("  /  ");
+        for (int i = 0; i < 10 + 4 * (STEPS - 1); i++) {
+            System.out.print("=");
+        }
+        System.out.print("  \\");
+	System.out.println(); 
+	System.out.print(" /  / ");
+        for (int i = 0; i < 8 + 4 * (STEPS - 1); i++) { 
+	System.out.print("\""); 
+	}
+        System.out.print(" \\  \\");
+        System.out.println();
+        System.out.print("|  | ");
+        for (int i = 0; i < 10 + 4 * (STEPS - 1); i++) {
+	    System.out.print("\"");
+	}
+        System.out.print(" |  |");
+        System.out.println();
+        System.out.print(" \\  \\ ");
+        for (int i = 0; i < 8 + 4 * (STEPS - 1); i++){
+            System.out.print("\"");
+	}
+        System.out.print(" /  /"); 
+	System.out.println();
+        System.out.print("  \\  ");
+        for (int i = 0; i < 10 + 4 * (STEPS - 1); i++) {
+            System.out.print("=");
+        }
+        System.out.print("  /");
+        System.out.println();
+        System.out.print("   \\");
+        for (int i = 0; i < 12 + 4 * (STEPS - 1); i++) { 
+	System.out.print("_"); 
+	}
+        System.out.println("/");
+    }
+}
